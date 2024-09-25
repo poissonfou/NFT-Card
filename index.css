@@ -1,0 +1,127 @@
+html {
+  height: 100vh;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: Outfit;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+
+.card {
+  background-color: hsl(216, 50%, 16%);
+  padding: 1.3em;
+  border-radius: 1rem;
+  width: 20rem;
+  align-self: center;
+}
+
+.card__image__container {
+  position: relative;
+}
+
+.card__image {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.card__image__overlay {
+  background-color: hsl(178 100% 50% / 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-radius: 0.5rem;
+  opacity: 0;
+}
+
+.card__image__overlay:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card__title {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.card__title:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.card__description {
+  color: hsl(215, 51%, 70%);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.card__price__container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+
+.card__price {
+  font-weight: 400;
+  color: hsl(178, 100%, 50%);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.card__time {
+  color: hsl(215, 51%, 70%);
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.card__creator__container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-weight: 300;
+  border-top: solid 2px hsl(215, 32%, 27%);
+  padding-top: 0.5rem;
+}
+
+.card__creator__container > img {
+  border: solid 2px hsl(0, 0%, 100%);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.card__creator__container p {
+  color: hsl(215, 51%, 70%);
+}
+
+.card__creator {
+  color: hsl(0, 0%, 100%);
+}
+
+.card__creator:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 18rem;
+  }
+}
